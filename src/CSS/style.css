@@ -1,0 +1,289 @@
+html{
+    scroll-behavior: smooth;
+    color: #fff;
+}
+
+body {
+    background-color: #282828;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background: rgb(2,0,36);
+    background: linear-gradient(162deg, rgba(0,0,0,1) 0%, rgba(121,9,9,1) 66%, rgba(255,0,0,1) 100%);
+}
+
+#mouse {
+    position: fixed;
+    height: 8px;
+    width: 8px;
+    background: linear-gradient(162deg, rgba(0,0,0,1) 0%, rgba(121,9,9,1) 66%, rgba(255,0,0,1) 100%);
+    animation: gradiente-animation 5s ease infinite;
+    top: 40px;
+    left: 40px;
+    z-index: 100;
+  }
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.cabecalho .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 54px;
+    font-family: "Raleway", sans-serif;
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo {
+    color: #a00101;
+    border: 2px solid #a00101;
+    transform: scale(1.1);
+}
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+    background-color: #a00101;
+    color: #fff;
+    border-radius: 50px;
+}
+
+
+.cabecalho .imgHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transition: 5s;
+    margin-left: 55px;
+    transform: scale(1.1);
+    animation: fadeIn 3s ease-in-out;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh - 125px);
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1 {
+    font-family: "Raleway" sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p {
+    font-family: "Raleway" sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home .redes-sociais a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais .rede1 a i:hover {
+    color: #008cff;
+    border: 1px solid #008cff;
+    transform: scale(1.1);
+}
+
+.home .redes-sociais .rede2 a i:hover {
+    color: #00ff62;
+    border: 1px solid #00ff62;
+    transform: scale(1.1);
+}
+.home .redes-sociais .rede3 a i:hover {
+    color: #000000;
+    border: 1px solid #000000;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.home .foto.sombra-interna {
+    background: linear-gradient(to right, #020024, #090979, #00d4ff);
+    background-size: 180% 180%;
+    animation: gradiente-animation 5s ease infinite;
+}
+
+.projetos {
+    padding: 70px 0;
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: fixed;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+    display: none;
+}
+
+.projetos .btn-mostrar-menos{
+    background: fixed;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-menos:hover{
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-menos.removerBtnMeno{
+    display: none;
+}
+
+.projetos .btn-mostrar-menos.mostrarBtnMeno{
+    display: flex;
+}
+
+
+@keyframes gradiente-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+  }
